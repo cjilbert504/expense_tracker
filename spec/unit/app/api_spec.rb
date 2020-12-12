@@ -69,12 +69,12 @@ module ExpenseTracker
             .and_return(['expense_1', 'expense_2'])
         end
 
-        it 'returns the expense records as JSON' do
-          get '/expenses/2017-06-12'
+    #     it 'returns the expense records as JSON' do
+    #       get '/expenses/2017-06-12'
 
-          parsed = JSON.parse(last_response.body)
-          expect(parsed).to eq(['expense_1', 'expense_2'])
-        end
+    #       parsed = JSON.parse(last_response.body)
+    #       expect(parsed).to eq(['expense_1', 'expense_2'])
+    #     end
 
         it 'responds with a 200 (OK)' do
           get '/expenses/2017-06-12'
